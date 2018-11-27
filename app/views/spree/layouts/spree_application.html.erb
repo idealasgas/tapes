@@ -8,21 +8,659 @@
     <%= render partial: 'spree/shared/head' %>
   </head>
   <body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
-    <%= render partial: 'spree/shared/header' %>
-
-    <div class="container">
-      <div class="row" data-hook>
-        <%= spree_breadcrumbs(@taxon) %>
-
-        <%= render partial: 'spree/shared/sidebar' if content_for? :sidebar %>
-
-        <div id="content" class="<%= !content_for?(:sidebar) ? "col-sm-12" : "col-sm-8 col-md-9" %>" data-hook>
-          <%= flash_messages %>
-          <%= yield %>
-        </div>
-
-        <%= yield :templates %>
+      <!-- Yandex.Metrika counter -->
+      <script type="text/javascript">
+         (function (d, w, c) {
+             (w[c] = w[c] || []).push(function() {
+                 try {
+                     w.yaCounter44593963 = new Ya.Metrika({
+                         id:44593963,
+                         clickmap:true,
+                         trackLinks:true,
+                         accurateTrackBounce:true,
+                         webvisor:true,
+                         trackHash:true
+                     });
+                 } catch(e) { }
+             });
+         
+             var n = d.getElementsByTagName("script")[0],
+                 s = d.createElement("script"),
+                 f = function () { n.parentNode.insertBefore(s, n); };
+             s.type = "text/javascript";
+             s.async = true;
+             s.src = "https://mc.yandex.ru/metrika/watch.js";
+         
+             if (w.opera == "[object Opera]") {
+                 d.addEventListener("DOMContentLoaded", f, false);
+             } else { f(); }
+         })(document, window, "yandex_metrika_callbacks");
+      </script>
+      <noscript>
+         <div><img src="https://mc.yandex.ru/watch/44593963" style="position:absolute; left:-9999px;" alt="" /></div>
+      </noscript>
+      <!-- /Yandex.Metrika counter -->
+      <div class="wrapper">
+         <header>
+            <div class="header">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-xs-3">
+                        <a href="index.html" class="logo">Главная</a>
+                     </div>
+                     <div class="col-xs-6">
+                        <div class="contacts">
+                           <span class="call_phone_hide">+7 495 664-91-53</span>
+                           <span class="call_phone_1">+7 926 336-80-51</span>
+                           <a href="mailto:info@x-tape.ru" onclick="ga('send', 'event', 'Click', 'HeadMailClick');"><i class="mail"></i> info@x-tape.ru</a>
+                        </div>
+                     </div>
+                     <div class="col-xs-3">
+                        <div class="madein">
+                           Японское качество
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="menu">
+               <div class="container">
+                  <div class="row">
+                     <nav class="rnav">
+                        <ul class="">
+                           <li class="first"><a href="catalog/index.html"  onclick="ga('send', 'event', 'MainMenu', 'catalog/index.html');">КУПИТЬ</a></li>
+                           <li><a href="smi/index.html"  onclick="ga('send', 'event', 'MainMenu', 'smi/index.html');">Применение тейпов</a></li>
+                           <li>
+                              <a href="javascript:void(0)" rel="default" class="dropdown">О компании</a>
+                              <ul class="">
+                                 <li class="first"><a href="o-kompanii/company.html"  onclick="ga('send', 'event', 'MainMenu', 'o-kompanii/company.html');">Компания</a></li>
+                                 <li class="last"><a href="o-kompanii/sotrudnichestvo.html"  onclick="ga('send', 'event', 'MainMenu', 'o-kompanii/sotrudnichestvo.html');">Сотрудничество</a></li>
+                              </ul>
+                           </li>
+                           <li><a href="review.html"  onclick="ga('send', 'event', 'MainMenu', 'review.html');">Отзывы</a></li>
+                           <li>
+                              <a href="javascript:void(0)" rel="default" class="dropdown">Доставка и оплата</a>
+                              <ul class="">
+                                 <li class="first"><a href="kupit/dostavka.html"  onclick="ga('send', 'event', 'MainMenu', 'kupit/dostavka.html');">Доставка</a></li>
+                                 <li class="last"><a href="kupit/oplata.html"  onclick="ga('send', 'event', 'MainMenu', 'kupit/oplata.html');">Оплата</a></li>
+                              </ul>
+                           </li>
+                           <li class="last"><a href="direction/index.html"  onclick="ga('send', 'event', 'MainMenu', 'direction/index.html');">Инструкция</a></li>
+                        </ul>
+                     </nav>
+                     <button type="button" class="callback" data-toggle="modal" data-target="#callback" onclick="ga('send', 'event', 'Click', 'HeadCallClick');">Обратный звонок</button>
+                     <a href="order.html" class="cart" onclick="ga('send', 'event', 'Click', 'HeadCartClick');">
+                        Корзина 
+                        <div id="msMiniCart" class="">
+                           <div class="empty"></div>
+                           <div class="not_empty">
+                              <span class="ms2_total_count">0</span>
+                           </div>
+                        </div>
+                     </a>
+                     <div class="mobile">
+                        <span>Меню</span>
+                        <ul class="">
+                           <li class="first"><a href="catalog/index.html"  onclick="ga('send', 'event', 'MainMenu', 'catalog/index.html');">КУПИТЬ</a></li>
+                           <li><a href="smi/index.html"  onclick="ga('send', 'event', 'MainMenu', 'smi/index.html');">Применение тейпов</a></li>
+                           <li>
+                              <a href="javascript:void(0)" rel="default" class="dropdown">О компании</a>
+                              <ul class="">
+                                 <li class="first"><a href="o-kompanii/company.html"  onclick="ga('send', 'event', 'MainMenu', 'o-kompanii/company.html');">Компания</a></li>
+                                 <li class="last"><a href="o-kompanii/sotrudnichestvo.html"  onclick="ga('send', 'event', 'MainMenu', 'o-kompanii/sotrudnichestvo.html');">Сотрудничество</a></li>
+                              </ul>
+                           </li>
+                           <li><a href="review.html"  onclick="ga('send', 'event', 'MainMenu', 'review.html');">Отзывы</a></li>
+                           <li>
+                              <a href="javascript:void(0)" rel="default" class="dropdown">Доставка и оплата</a>
+                              <ul class="">
+                                 <li class="first"><a href="kupit/dostavka.html"  onclick="ga('send', 'event', 'MainMenu', 'kupit/dostavka.html');">Доставка</a></li>
+                                 <li class="last"><a href="kupit/oplata.html"  onclick="ga('send', 'event', 'MainMenu', 'kupit/oplata.html');">Оплата</a></li>
+                              </ul>
+                           </li>
+                           <li class="last"><a href="direction/index.html"  onclick="ga('send', 'event', 'MainMenu', 'direction/index.html');">Инструкция</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </header>
+         <main>
+            <section class="splash">
+               <ul class="splash-carusel">
+                  <li><img src="assets/images/splash/splash.jpg" alt="..."></li>
+                  <li><img src="assets/images/splash/banner3.jpg" alt="..."></li>
+                  <li><img src="assets/images/splash/banner2.jpg" alt="..."></li>
+               </ul>
+               <div class="intro">
+                  <div class="cover">
+                     <div class="content">
+                        <div class="animate bottom">
+                           <div class="logo">
+                              <img src="theme/images/icons/logo-intro.svg" alt="...">
+                              <span>Кинезио Тейп</span>
+                           </div>
+                           <p>Лента из хлопка, эластичная, которая схожа <br> с эластичностью кожи человека.<br><a href="catalog/index.html">Купить тут.</a></p>
+                        </div>
+                     </div>
+                     <img src="theme/images/shape-top.svg" class="svg-image" alt="...">
+                  </div>
+               </div>
+            </section>
+            <section class="about">
+               <div class="container">
+                  <div class="row">
+                     <div class="item col-lg-4 col-md-5 col-sm-6 col-lg-offset-1 col-md-offset-1">
+                        <a href="catalog/index.html" class="animate left shadow">
+                        <img src="theme/images/packaging.png" alt="...">
+                        </a>
+                     </div>
+                     <div class="item col-lg-6 col-md-5 col-sm-6">
+                        <div class="content">
+                           <span class="animate bottom">Кинезио тейпы <span>X-TAPE</span></span>
+                           <div class="animate bottom">
+                              <p>X-TAPE - это современное высокотехнологичное Японское средство, применяемое в физиотерапии и спортивной медицине. При правильном наложении кинезио тейп способствует облегчению боли, снижению отека и ускорению заживления поврежденных в результате травмы тканей.</p>
+                           </div>
+                           <div class="animate bottom">
+                              <a href="catalog/index.html" class="btn btn-primary" onclick="ga('send', 'event', 'MainPage', 'Catalog');">Перейти в каталог</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row" style="padding-top: 40px;">
+                     <div class="item col-lg-6 col-md-5 col-sm-6 col-lg-offset-1 col-md-offset-1">
+                        <div class="content" style="text-align: right; padding-top: 40px;">
+                           <span class="blockquote animate bottom">&laquo;Рекомендую и использую <span style="display: inline-block;">X-TAPE</span><br> в своей практике&raquo;</span>
+                           <div class="animate bottom">
+                              <p><strong>Артур САВЧИН</strong> <br>Кинезиолог. Врач высшей категории <br>Стаж 25 лет</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="item col-lg-4 col-md-5 col-sm-6">
+                        <div class="animate bottom">
+                           <img src="theme/images/doctor.png" alt="..." class="img-responsive">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section class="helper">
+               <div class="container">
+                  <span class="title animate bottom">Как помогают «X-TAPE» телу</span>
+                  <div class="row">
+                     <div class="item col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1">
+                        <ul class="helper-carusel">
+                           <li class="carusel-item">
+                              <ul class="items">
+                                 <li class="animate bottom">
+                                    <div class="icon">
+                                       <img src="theme/images/icons/helper-ico-1.svg" alt="...">
+                                    </div>
+                                    <p>Улучшают кровообращение и движение лимфы</p>
+                                 </li>
+                                 <li class="animate bottom">
+                                    <div class="icon">
+                                       <img src="theme/images/icons/helper-ico-2.svg" alt="...">
+                                    </div>
+                                    <p>Улучшают кровообращение и движение лимфы</p>
+                                 </li>
+                                 <li class="animate bottom">
+                                    <div class="icon">
+                                       <img src="theme/images/icons/helper-ico-3.svg" alt="...">
+                                    </div>
+                                    <p>Улучшают кровообращение и движение лимфы</p>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li class="carusel-item">
+                              <ul class="items">
+                                 <li class="animate bottom">
+                                    <div class="icon">
+                                       <img src="theme/images/icons/helper-ico-4.svg" alt="...">
+                                    </div>
+                                    <p>Улучшают функции мышц (расслабляют или тонизируют их)</p>
+                                 </li>
+                                 <li class="animate bottom">
+                                    <div class="icon">
+                                       <img src="theme/images/icons/helper-ico-5.svg" alt="...">
+                                    </div>
+                                    <p>Сегментарно воздействуют на внутренние органы</p>
+                                 </li>
+                                 <li class="animate bottom">
+                                    <div class="icon">
+                                       <img src="theme/images/icons/helper-ico-6.svg" alt="...">
+                                    </div>
+                                    <p>Для устранения болей в спине</p>
+                                 </li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section class="about">
+               <div class="container">
+                  <div class="row">
+                     <span class="title animate bottom">Сферы применения лент «X-TAPE»</span>
+                  </div>
+                  <div class="row">
+                     <div class="about-carusel">
+                        <div class="carusel-item">
+                           <div class="item col-lg-4 col-md-5 col-sm-6 col-lg-offset-1 col-md-offset-1">
+                              <img src="assets/images/info/ban1.jpg" class="animate left" alt="...">
+                           </div>
+                           <div class="item col-lg-5 col-md-5 col-sm-6">
+                              <span class="animate bottom">Для красивого <span>тела  </span></span>
+                              <div class="animate bottom">
+                                 <p>Этот необычный продукт поможет укрепить и подтянуть кожу в разных участках тела. При использовании лент в зонах бедер, ягодиц, живота и даже бюста активируется своего рода массаж, деликатность и мягкость которого компенсируется продолжительностью действия. «X-TAPE» — это верный помощник для моделирования вашего идеального силуэта.</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="carusel-item">
+                           <div class="item col-lg-4 col-md-5 col-sm-6 col-lg-offset-1 col-md-offset-1">
+                              <img src="assets/images/info/women_fitness_01.jpg" class="animate left" alt="...">
+                           </div>
+                           <div class="item col-lg-5 col-md-5 col-sm-6">
+                              <span class="animate bottom">Для занятия<span> фитнесом  </span></span>
+                              <div class="animate bottom">
+                                 <p>Популярность «X-TAPE» растёт среди людей, которые хотят более качественно работать со своим телом, и избавиться от проблемных зон. Такие ленты активно используются в силовых тренировках, пилатесе, занятиях на растяжку и гибкость. Работая с лентами «X-TAPE» Вы сможете значительно повысить свою выносливость, гибкость и мышечную силу. Она удобна и проста в использовании и не сковывает ваши движения.</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="carusel-item">
+                           <div class="item col-lg-4 col-md-5 col-sm-6 col-lg-offset-1 col-md-offset-1">
+                              <img src="assets/images/info/3125553333.jpg" class="animate left" alt="...">
+                           </div>
+                           <div class="item col-lg-5 col-md-5 col-sm-6">
+                              <span class="animate bottom">Для профессиональных <span>спортсменов</span></span>
+                              <div class="animate bottom">
+                                 <p>Ушибы, растяжения, надрывы, восполнения мышц сухожилий, вывихи, подвывихи, артрозы и воспаления суставов, синдром Дюплея, адгезивный капсулит (“замороженное” плечо), “теннисный” локоть, грыжи позвоночника, протрузии, остеохондрозы, боли в мышцах и суставах, гематомы.</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="carusel-item">
+                           <div class="item col-lg-4 col-md-5 col-sm-6 col-lg-offset-1 col-md-offset-1">
+                              <img src="assets/images/info/ban2.jpg" class="animate left" alt="...">
+                           </div>
+                           <div class="item col-lg-5 col-md-5 col-sm-6">
+                              <span class="animate bottom">Для будущих <span>мам </span></span>
+                              <div class="animate bottom">
+                                 <p>Кинезио тейп — это настоящая находка, не содержащая медикаментов, безопасная альтернатива, которая может помочь облегчить многие симптомы беременности, включая боли в спине, опухшие ноги, воспаление седалищного нерва, боль в запястьях и другие виды дискомфорта. Именно поэтому тейп — идеальный вариант для будущих мам, которые хотят, немного облегчить свою беременную участь.</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section class="structure">
+               <div class="container">
+                  <div class="row titlerow">
+                     <span class="title animate bottom">Японское качество «X-TAPE»</span>
+                  </div>
+                  <div class="row">
+                     <div class="col-lg-6 col-md-6 col-sm-7 col-lg-offset-1 col-md-offset-1">
+                        <img src="theme/images/composition.png" class="composition animate" alt="...">
+                        <div class="item">
+                           <span class="animate bottom">Хлопковая основа</span>
+                           <figure>
+                              <img src="theme/images/icons/water.svg" class="animate left" alt="...">
+                              <figcaption class="animate bottom">
+                                 Не препятствует испарению влаги, что позволяет использовать «X-Tape» даже в водных видах спорта и при интенсивных нагрузках, связанных с повышенным выделением пота
+                              </figcaption>
+                           </figure>
+                        </div>
+                        <div class="item">
+                           <span class="animate bottom">Гипоаллергенный клеящий слой на акриловой основе</span>
+                           <figure>
+                              <img src="theme/images/icons/gear.svg" class="animate left" alt="...">
+                              <figcaption class="animate bottom">
+                                 Активизируется
+                                 <br> под воздействием тепла
+                              </figcaption>
+                           </figure>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section class="smi">
+               <div class="container text-center">
+                  <a href="smi/index.html" class="title animate bottom" onclick="ga('send', 'event', 'MainPage', 'Smi');">Применение тейпов</a>
+                  <div>
+                     <iframe style="margin: 0 auto;" width="560" height="315" src="https://www.youtube.com/embed/wKLBJcmkDcQ" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                  <div class="row text-left">
+                     <div class="item col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1">
+                        <div class="smi-carusel animate">
+                           <div class="carusel-item">
+                              <a href="smi/test-kinezio-tejpov-v-programme-zhit-zdorovo-na-1-kanale.html" class="content" rel="nofollow">
+                                 <img src="assets/images/resources/39/270x235/2016-10-25-00-46-17.jpg" alt="...">
+                                 <div class="description">
+                                    <span>Тест кинезио тейпов в программе "Жить здорово" на 1 канале</span>
+                                    <small>gazeta.ru</small>
+                                 </div>
+                              </a>
+                           </div>
+                           <div class="carusel-item">
+                              <a href="smi/kineziotejpirovanie-pervyij-kanal-zhit-zdorovo.html" class="content" rel="nofollow">
+                                 <img src="assets/images/resources/38/270x235/2016-10-25-00-42-04.jpg" alt="...">
+                                 <div class="description">
+                                    <span>Кинезиотейпирование. Первый канал "Жить Здорово"</span>
+                                    <small>gazeta.ru</small>
+                                 </div>
+                              </a>
+                           </div>
+                           <div class="carusel-item">
+                              <a href="smi/vot-prikleilsya-kinezio-tejping.html" class="content" rel="nofollow">
+                                 <img src="assets/images/resources/37/270x235/700x605-0xd42ee42a-14399126891432300168.jpg" alt="...">
+                                 <div class="description">
+                                    <span>Вот приклеился: кинезио-тейпинг</span>
+                                    <small>gazeta.ru</small>
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section class="category">
+               <div class="container text-center">
+                  <a href="catalog/index.html" class="title animate bottom" onclick="ga('send', 'event', 'MainPage', 'Сhoose');">Купить тейп</a>
+                  <div class="row text-left">
+                     <div class="col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1">
+                        <div class="item col-sm-6">
+                           <a href="catalog/sale/index.html" class="image animate" onclick="ga('send', 'event', 'MainPage', 'catalog/sale/index.html');">
+                              <img src="assets/components/phpthumbof/cache/weerwerwe.cfb3cb5d5df08f659e381893cb22ae641.png" alt="...">
+                              <div class="description">
+                                 <h2 class="name">Товары со скидкой</h2>
+                                 <p>Покупая больше, Вы платите меньше. В наличие есть тейпы десяти цветов: красный, желтый, бежевый, зеленый и др. Тейпы доступны в двух вариантах: нарезанные (20 полос по 25см) и цельные ленты длиной 5м.</p>
+                              </div>
+                           </a>
+                        </div>
+                        <div class="item col-sm-6">
+                           <a href="catalog/tape/index.html" class="image animate" onclick="ga('send', 'event', 'MainPage', 'catalog/tape/index.html');">
+                              <img src="assets/components/phpthumbof/cache/category-1.d68fb999bc13e6ed706ba0c710a5b2d51.jpg" alt="...">
+                              <div class="description">
+                                 <h2 class="name">Кинезио тейпы X-Tape</h2>
+                                 <p>В наличие есть тейпы десяти цветов: красный, желтый, бежевый, зеленый и др. Тейпы доступны в двух вариантах: нарезанные (20 полос по 25см) и цельные ленты длиной 5м.</p>
+                              </div>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <span class="title animate bottom">Бесплатная консультация кинезиолога</span>
+                  </div>
+                  <div class="row">
+                     <div class="typography text-left content col-lg-8 col-md-8 col-lg-offset-1 col-md-offset-1 animate bottom">
+                        <form class="form-horizontal ajax_form" method="post" onreset="ga('send', 'event', 'Form', 'CallbackSend');">
+                           <input type="text" name="nospam" class="nospam" value="">
+                           <div class="form-group">
+                              <label class="col-sm-3 control-label">Имя</label>
+                              <div class="input col-sm-9">
+                                 <input type="text" name="fullname" class="form-control">
+                                 <small>*</small>
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label class="col-sm-3 control-label">Телефон</label>
+                              <div class="input col-sm-9">
+                                 <input type="text" name="phone" class="form-control">
+                                 <small>*</small>
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label class="col-sm-3 control-label">Примечание</label>
+                              <div class="input col-sm-9">
+                                 <textarea class="form-control" name="comment"></textarea>
+                                 <p class="help-block">* обязательные поля</p>
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <div class="col-sm-9 col-sm-offset-3 text-center">
+                                 <button type="submit" class="btn btn-primary" onclick="ga('send', 'event', 'Click', 'CallbackClick');">Заказать звонок</button>
+                              </div>
+                           </div>
+                           <input type="hidden" name="af_action" value="b33fe4a97a64f2d1ea29d88525d3a6cd" />
+                        </form>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="typography text-left content col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1 animate bottom">
+                        <h1 style="text-align: center;">Кинезио ленты для всех</h1>
+                        <p>Наш интернет магазин рад предложить Вам уникальную, высокотехнологичную японскую новинку – <a href="catalog/index.html" target="_self">пластыри Кинезио Тейп</a>.</p>
+                        <p>Кинезио Тейп – универсальная разработка японского доктора и ученого Kenzo Kase, которая с момента своего появления обрела широкую популярность и востребованность во всем мире. Это эффективное средство, предназначенное для физиотерапии и спортивной медицины, обладает лечебными свойствами и способностью поддерживать мышцы в тонусе. Уникальность новинки заключается в применении внешнего физического воздействия, не ограничивающего подвижность тканей.&nbsp;</p>
+                        <p><strong>Уникальные свойства Кинезио Тейп и особенности метода кинезиотейпинга</strong></p>
+                        <p>Мы предлагаем Вам способ, который раз и навсегда поможет забыть об эластичных бинтах, различных кремах и мазях, а также спортивных лентах!</p>
+                        <p><a href="catalog/index.html" target="_self">Кинезио Тейп</a> – современное средство, которое поможет оперативно и эффективно снять отечность, устранить болевые ощущения и ускорить восстановительные процессы. Пластырь из натурального материала, обладает длительным действием и является гипоаллергенным. Не реагирует на влагу и отлично подходит для повседневного использования.</p>
+                        <p>Легкий в использовании и доступный эластичный пластырь, имеющий клейкий акриловый слой, активизируется от температуры человеческого тела. За счет своей эластичности Кинезио Тейп оказывает поддержку травмированным тканям и мышцам, а также облегчает лимфодренаж.&nbsp;</p>
+                        <p>Среди основных достоинств средства следует выделить:</p>
+                        <ul>
+                           <li>натуральный продукт – лента выполнена из хлопка;</li>
+                           <li>длительный эффект – пластырь действует в течение 4-6 дней;</li>
+                           <li>широкая сфера применения – боли в суставах, ноющие болевые ощущения, ушибы и другие заболевания опорно-двигательной системы;</li>
+                           <li>увеличивает эффективность лечения травм;</li>
+                           <li>полностью снимает боль;</li>
+                           <li>делает мышцы более выносливыми и увеличивает амплитуду движений;</li>
+                           <li>возвращает работоспособность поврежденным тканям и мышцам.</li>
+                        </ul>
+                        <p><strong>Что мы можем Вам предложить?</strong></p>
+                        <p>Интернет магазин X-TAPE – это возможность быть здоровым и не останавливаются на пути к поставленной цели! У нас Вы можете <a href="catalog/index.html" target="_self">купить Кинезио Тейп</a> – пластыри нового поколения по самым выгодным ценам и в максимально короткие сроки.</p>
+                        <p>Интернет магазин X-TAPE – это:</p>
+                        <ul>
+                           <li>широкий ассортимент эластичных, эффективных лент Кинезио Тейп и возможность подобрать пластырь индивидуально;</li>
+                           <li>возможность быстро устранить последствия травм и предотвратить новые;</li>
+                           <li>всегда доступные и выгодные цены;</li>
+                           <li>профессиональные консультации и помощь при выборе.</li>
+                        </ul>
+                        <p>Будьте всегда в форме, избавьтесь от болезненных ощущений вместе с Кинезио Тейп!&nbsp;</p>
+                     </div>
+                  </div>
+               </div>
+               <img src="theme/images/shape-bottom.svg" class="svg-image" alt="...">
+            </section>
+            <section class="gallery">
+               <div class="container">
+                  <div class="gallery-outer">
+                     <div class="gallery-carusel">
+                        <img src="assets/images/gallery/1/130x130/0011.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/img-3.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/original.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/0014.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/0012.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/tumblr-m86ol9bvbt1r1thtao1-1280.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/1a8a4897e8ed98f9dba3112854441f4b.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/2-jpeg.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/479139.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/6-kinezio-tejp-tm-belosnezhka-5sm-5m.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/ukolova-khomjakova-2012.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/130.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/217ef078-a5ea-11e3-8c40-d685998d6e75-f507d86a-a5f5-11e3-8c40-d685998d6e75-700x700.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/0015.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/0013.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/04-pregnancy-900x600.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/1310091-mfull.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/12282907-516413228535698-1388354341-n.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/smi.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/20130313-122345.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/1798616433.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/1343643048421294.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/cq5dam.web-.1280.1280.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/dcp-150x150.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/dsc07216.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/e6a6e732e746b5cb359f10497601faa3.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/fm4.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/img-2580.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/img-20141214-170442.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/kinesiotape-olympic-javelin.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/kinesio-tape2-(1).jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/kinezio-teip-koleno.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/kinseio-tape-spg.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/k-taping-academy-schwanger.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/maxresdefault.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/medicaltaping23(1).jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/p-0549af63edff1c.f.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/parent-strengthtape-precut-roll-3.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/photo-oct-12-11-24-54-am.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/razryv-sv-kol-4.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/sport3(1).jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/study-shows-kinesio-taping-aids-prevention-of-disorders-among-dancers.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/t3s5txcrwpo.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/tejpirovanie-kolena.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/tourofturkey.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/test.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/what-is-kinesiology-tape-main.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/kinezio-tejp-designer-4.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/3hzn.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/img-2.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/photo.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/1280px-bandasneuromusculares1.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/225.jpg" alt="...">
+                        <img src="assets/images/gallery/1/130x130/resources.jpg" alt="...">
+                     </div>
+                     <div class="plate">
+                        <img src="theme/images/icons/photo.svg" alt="...">
+                        <span>Использование кинезио тейпов в жизни</span>
+                        <div class="controll">
+                           <button class="btn btn-primary prev"></button>
+                           <button class="btn btn-primary next"></button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="typography text-left content col-md-4 animate bottom">
+                        <span class="title animate bottom">Остались вопросы?</span>
+                        <p class="titlep">Напишите нам и получите на почту полную инструкцию по применению и консультацию нашего специалиста</p>
+                     </div>
+                     <div class="typography text-left content col-md-8 animate bottom" style="margin-bottom: 15px;">
+                        <form class="form-horizontal ajax_form" method="post" onreset="ga('send', 'event', 'Form', 'CallbackSend');">
+                           <input type="text" name="nospam" class="nospam" value="">
+                           <div class="form-group">
+                              <label class="col-sm-3 control-label">Имя</label>
+                              <div class="input col-sm-9">
+                                 <input type="text" name="fullname" class="form-control">
+                                 <small>*</small>
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label class="col-sm-3 control-label">Телефон</label>
+                              <div class="input col-sm-9">
+                                 <input type="text" name="phone" class="form-control">
+                                 <small>*</small>
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label class="col-sm-3 control-label">Сообщение</label>
+                              <div class="input col-sm-9">
+                                 <textarea class="form-control" name="comment"></textarea>
+                                 <p class="help-block">* обязательные поля</p>
+                              </div>
+                           </div>
+                           <div class="form-group" style="margin-top: -15px;">
+                              <div class="col-sm-9 col-sm-offset-3 text-center">
+                                 <button type="submit" class="btn btn-primary" onclick="ga('send', 'event', 'Click', 'CallbackClick');">Отправить сообщение</button>
+                              </div>
+                           </div>
+                           <input type="hidden" name="af_action" value="9039a870a8a394f1ec7897392bc5b2cf" />
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </main>
       </div>
-    </div>
+      <div id="callback" class="modal fade" tabindex="-1" role="dialog">
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h2>Заказать обратный звонок</h2>
+                  <button data-dismiss="modal"></button>
+               </div>
+               <div class="modal-body">
+                  <form class="form-horizontal ajax_form" method="post" onreset="ga('send', 'event', 'Form', 'CallbackSend');">
+                     <input type="text" name="nospam" class="nospam" value="">
+                     <div class="form-group">
+                        <label class="col-sm-3 control-label">Имя</label>
+                        <div class="input col-sm-9">
+                           <input type="text" name="fullname" class="form-control">
+                           <small>*</small>
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <label class="col-sm-3 control-label">Телефон</label>
+                        <div class="input col-sm-9">
+                           <input type="text" name="phone" class="form-control">
+                           <small>*</small>
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <label class="col-sm-3 control-label">Примечание</label>
+                        <div class="input col-sm-9">
+                           <textarea class="form-control" name="comment"></textarea>
+                           <p class="help-block">* обязательные поля</p>
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <div class="col-xs-12 text-center">
+                           <button type="submit" class="btn btn-primary" onclick="ga('send', 'event', 'Click', 'CallbackClick');">Заказать звонок</button>
+                        </div>
+                     </div>
+                     <input type="hidden" name="af_action" value="0fa850c79fe650300eca042673fd5116" />
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="scroll-top"></div>
+      <footer>
+         <div class="container">
+            <div class="row menu">
+               <nav>
+                  <ul class="">
+                     <li class="first"><a href="catalog/index.html"  onclick="ga('send', 'event', 'MainMenu', 'catalog/index.html');">КУПИТЬ</a></li>
+                     <li><a href="smi/index.html"  onclick="ga('send', 'event', 'MainMenu', 'smi/index.html');">Применение тейпов</a></li>
+                     <li>
+                        <a href="javascript:void(0)" rel="default" class="dropdown">О компании</a>
+                        <ul class="">
+                           <li class="first"><a href="o-kompanii/company.html"  onclick="ga('send', 'event', 'MainMenu', 'o-kompanii/company.html');">Компания</a></li>
+                           <li class="last"><a href="o-kompanii/sotrudnichestvo.html"  onclick="ga('send', 'event', 'MainMenu', 'o-kompanii/sotrudnichestvo.html');">Сотрудничество</a></li>
+                        </ul>
+                     </li>
+                     <li><a href="review.html"  onclick="ga('send', 'event', 'MainMenu', 'review.html');">Отзывы</a></li>
+                     <li>
+                        <a href="javascript:void(0)" rel="default" class="dropdown">Доставка и оплата</a>
+                        <ul class="">
+                           <li class="first"><a href="kupit/dostavka.html"  onclick="ga('send', 'event', 'MainMenu', 'kupit/dostavka.html');">Доставка</a></li>
+                           <li class="last"><a href="kupit/oplata.html"  onclick="ga('send', 'event', 'MainMenu', 'kupit/oplata.html');">Оплата</a></li>
+                        </ul>
+                     </li>
+                     <li class="last"><a href="direction/index.html"  onclick="ga('send', 'event', 'MainMenu', 'direction/index.html');">Инструкция</a></li>
+                  </ul>
+               </nav>
+            </div>
+            <div class="row">
+               <div class="col-sm-6 item">
+                  <p>© 2012 «X-Tape» ИП Олизаренко Андрей Юрьевич<br>ИНН 614209994731, ОГРНИП 315500900009642<br>Все права защищены</p>
+               </div>
+               <div class="col-sm-6 item text-right">
+                  <p>Сделано в <a href="http://berezkastudio.ru/">Berezkastudio</a></p>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- BEGIN JIVOSITE CODE {literal} -->
+      <script type='text/javascript'>
+         (function(){ var widget_id = 'yEJ3iRjo0h';var d=document;var w=window;function l(){
+         var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+      </script>
+      <!-- {/literal} END JIVOSITE CODE -->
+      <!-- <script type="text/javascript" src="assets/components/minifyx/cache/scripts_bbba7cf5c2.min.js"></script> -->
+      <!-- <script type="text/javascript" src="assets/components/minishop2/js/web/defaultf260.js?v=7ae18dac02"></script> -->
+      <!-- <script type="text/javascript" src="assets/components/ajaxform/js/default.js"></script> -->
+      <script type="text/javascript">AjaxForm.initialize({"assetsUrl":"\/assets\/components\/ajaxform\/","actionUrl":"\/assets\/components\/ajaxform\/action.php","closeMessage":"\u0437\u0430\u043a\u0440\u044b\u0442\u044c \u0432\u0441\u0435","formSelector":"form.ajax_form","pageId":1});</script>
+      <!-- <script type="text/javascript" src="assets/components/ms2gallery/js/web/default.js"></script> -->
   </body>
 </html>
