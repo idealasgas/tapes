@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="27px" viewBox="0 0 34 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40 (33762) - http://www.bohemiancoding.com/sketch -->
+    <title>logo-mobile</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ico" transform="translate(-1353.000000, 0.000000)">
+            <g id="logo-mobile" transform="translate(1353.000000, 0.000000)">
+                <polygon id="Shape" fill="#608BC9" points="0.615 0.981 11.015 0.981 22.344 13.981 11.479 26.981 0.615 26.981 11.499 13.981"></polygon>
+                <polygon id="Shape" fill="#050D0C" points="20.115 4.881 25.129 10.266 34.044 0.981 23.644 0.981"></polygon>
+                <polygon id="Shape" fill="#050D0C" points="20.115 23.081 25.129 17.695 34.044 26.981 23.644 26.981"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

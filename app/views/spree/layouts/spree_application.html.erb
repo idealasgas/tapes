@@ -23,14 +23,14 @@
                      });
                  } catch(e) { }
              });
-         
+
              var n = d.getElementsByTagName("script")[0],
                  s = d.createElement("script"),
                  f = function () { n.parentNode.insertBefore(s, n); };
              s.type = "text/javascript";
              s.async = true;
              s.src = "https://mc.yandex.ru/metrika/watch.js";
-         
+
              if (w.opera == "[object Opera]") {
                  d.addEventListener("DOMContentLoaded", f, false);
              } else { f(); }
@@ -90,7 +90,7 @@
                      </nav>
                      <button type="button" class="callback" data-toggle="modal" data-target="#callback" onclick="ga('send', 'event', 'Click', 'HeadCallClick');">Обратный звонок</button>
                      <a href="order.html" class="cart" onclick="ga('send', 'event', 'Click', 'HeadCartClick');">
-                        Корзина 
+                        Корзина
                         <div id="msMiniCart" class="">
                            <div class="empty"></div>
                            <div class="not_empty">
@@ -128,22 +128,22 @@
          <main>
             <section class="splash">
                <ul class="splash-carusel">
-                  <li><img src="assets/images/splash/splash.jpg" alt="..."></li>
-                  <li><img src="assets/images/splash/banner3.jpg" alt="..."></li>
-                  <li><img src="assets/images/splash/banner2.jpg" alt="..."></li>
+                  <li><%= image_tag("splash/splash.jpg", :alt => "rss feed") %></li>
+                  <li><%= image_tag("splash/banner3.jpg", :alt => "rss feed") %></li>
+                  <li><%= image_tag("splash/banner2.jpg", :alt => "rss feed") %></li>
                </ul>
                <div class="intro">
                   <div class="cover">
                      <div class="content">
                         <div class="animate bottom">
                            <div class="logo">
-                              <img src="theme/images/icons/logo-intro.svg" alt="...">
+                              <%= image_tag("icons/logo-intro.svg", :alt => "rss feed") %>
                               <span>Кинезио Тейп</span>
                            </div>
                            <p>Лента из хлопка, эластичная, которая схожа <br> с эластичностью кожи человека.<br><a href="catalog/index.html">Купить тут.</a></p>
                         </div>
                      </div>
-                     <img src="theme/images/shape-top.svg" class="svg-image" alt="...">
+                     <%= image_tag("shape-top.svg", :alt => "rss feed") %>
                   </div>
                </div>
             </section>
@@ -152,7 +152,7 @@
                   <div class="row">
                      <div class="item col-lg-4 col-md-5 col-sm-6 col-lg-offset-1 col-md-offset-1">
                         <a href="catalog/index.html" class="animate left shadow">
-                        <img src="theme/images/packaging.png" alt="...">
+                        <%= image_tag("packaging.png", :alt => "rss feed") %>
                         </a>
                      </div>
                      <div class="item col-lg-6 col-md-5 col-sm-6">
@@ -178,7 +178,7 @@
                      </div>
                      <div class="item col-lg-4 col-md-5 col-sm-6">
                         <div class="animate bottom">
-                           <img src="theme/images/doctor.png" alt="..." class="img-responsive">
+                           <%= image_tag("doctor.png", :alt => "rss feed") %>
                         </div>
                      </div>
                   </div>
@@ -194,19 +194,19 @@
                               <ul class="items">
                                  <li class="animate bottom">
                                     <div class="icon">
-                                       <img src="theme/images/icons/helper-ico-1.svg" alt="...">
+                                       <%= image_tag("icons/helper-ico-1.svg", :alt => "rss feed") %>
                                     </div>
                                     <p>Улучшают кровообращение и движение лимфы</p>
                                  </li>
                                  <li class="animate bottom">
                                     <div class="icon">
-                                       <img src="theme/images/icons/helper-ico-2.svg" alt="...">
+                                       <%= image_tag("icons/helper-ico-2.svg", :alt => "rss feed") %>
                                     </div>
                                     <p>Улучшают кровообращение и движение лимфы</p>
                                  </li>
                                  <li class="animate bottom">
                                     <div class="icon">
-                                       <img src="theme/images/icons/helper-ico-3.svg" alt="...">
+                                       <%= image_tag("icons/helper-ico-3.svg", :alt => "rss feed") %>
                                     </div>
                                     <p>Улучшают кровообращение и движение лимфы</p>
                                  </li>
@@ -216,19 +216,19 @@
                               <ul class="items">
                                  <li class="animate bottom">
                                     <div class="icon">
-                                       <img src="theme/images/icons/helper-ico-4.svg" alt="...">
+                                       <%= image_tag("icons/helper-ico-4.svg", :alt => "rss feed") %>
                                     </div>
                                     <p>Улучшают функции мышц (расслабляют или тонизируют их)</p>
                                  </li>
                                  <li class="animate bottom">
                                     <div class="icon">
-                                       <img src="theme/images/icons/helper-ico-5.svg" alt="...">
+                                       <%= image_tag("icons/helper-ico-5.svg", :alt => "rss feed") %>
                                     </div>
                                     <p>Сегментарно воздействуют на внутренние органы</p>
                                  </li>
                                  <li class="animate bottom">
                                     <div class="icon">
-                                       <img src="theme/images/icons/helper-ico-6.svg" alt="...">
+                                       <%= image_tag("icons/helper-ico-6.svg", :alt => "rss feed") %>
                                     </div>
                                     <p>Для устранения болей в спине</p>
                                  </li>
@@ -248,7 +248,7 @@
                      <div class="about-carusel">
                         <div class="carusel-item">
                            <div class="item col-lg-4 col-md-5 col-sm-6 col-lg-offset-1 col-md-offset-1">
-                              <img src="assets/images/info/ban1.jpg" class="animate left" alt="...">
+                              <%= image_tag("info/ban1.jpg", :alt => "rss feed") %>
                            </div>
                            <div class="item col-lg-5 col-md-5 col-sm-6">
                               <span class="animate bottom">Для красивого <span>тела  </span></span>
@@ -259,7 +259,7 @@
                         </div>
                         <div class="carusel-item">
                            <div class="item col-lg-4 col-md-5 col-sm-6 col-lg-offset-1 col-md-offset-1">
-                              <img src="assets/images/info/women_fitness_01.jpg" class="animate left" alt="...">
+                              <%= image_tag("info/women_fitness_01.jpg", :alt => "rss feed") %>
                            </div>
                            <div class="item col-lg-5 col-md-5 col-sm-6">
                               <span class="animate bottom">Для занятия<span> фитнесом  </span></span>
@@ -270,7 +270,8 @@
                         </div>
                         <div class="carusel-item">
                            <div class="item col-lg-4 col-md-5 col-sm-6 col-lg-offset-1 col-md-offset-1">
-                              <img src="assets/images/info/3125553333.jpg" class="animate left" alt="...">
+                              <!-- <img src="assets/images/info/3125553333.jpg" class="animate left" alt="..."> -->
+                              <%= image_tag("info/3125553333.jpg", :alt => "rss feed") %>
                            </div>
                            <div class="item col-lg-5 col-md-5 col-sm-6">
                               <span class="animate bottom">Для профессиональных <span>спортсменов</span></span>
@@ -281,7 +282,8 @@
                         </div>
                         <div class="carusel-item">
                            <div class="item col-lg-4 col-md-5 col-sm-6 col-lg-offset-1 col-md-offset-1">
-                              <img src="assets/images/info/ban2.jpg" class="animate left" alt="...">
+                              <!-- <img src="assets/images/info/ban2.jpg" class="animate left" alt="..."> -->
+                              <%= image_tag("info/ban2.jpg", :alt => "rss feed") %>
                            </div>
                            <div class="item col-lg-5 col-md-5 col-sm-6">
                               <span class="animate bottom">Для будущих <span>мам </span></span>
@@ -301,11 +303,12 @@
                   </div>
                   <div class="row">
                      <div class="col-lg-6 col-md-6 col-sm-7 col-lg-offset-1 col-md-offset-1">
-                        <img src="theme/images/composition.png" class="composition animate" alt="...">
+<!--                         <img src="theme/images/composition.png" class="composition animate" alt="...">
+ -->                        <%= image_tag("composition.png", :alt => "rss feed") %>
                         <div class="item">
                            <span class="animate bottom">Хлопковая основа</span>
                            <figure>
-                              <img src="theme/images/icons/water.svg" class="animate left" alt="...">
+                              <%= image_tag("icons/water.svg", :alt => "rss feed") %>
                               <figcaption class="animate bottom">
                                  Не препятствует испарению влаги, что позволяет использовать «X-Tape» даже в водных видах спорта и при интенсивных нагрузках, связанных с повышенным выделением пота
                               </figcaption>
@@ -314,7 +317,8 @@
                         <div class="item">
                            <span class="animate bottom">Гипоаллергенный клеящий слой на акриловой основе</span>
                            <figure>
-                              <img src="theme/images/icons/gear.svg" class="animate left" alt="...">
+                              <!-- <img src="theme/images/icons/gear.svg" class="animate left" alt="..."> -->
+                              <%= image_tag("icons/gear.svg", :alt => "rss feed") %>
                               <figcaption class="animate bottom">
                                  Активизируется
                                  <br> под воздействием тепла
@@ -325,47 +329,7 @@
                   </div>
                </div>
             </section>
-            <section class="smi">
-               <div class="container text-center">
-                  <a href="smi/index.html" class="title animate bottom" onclick="ga('send', 'event', 'MainPage', 'Smi');">Применение тейпов</a>
-                  <div>
-                     <iframe style="margin: 0 auto;" width="560" height="315" src="https://www.youtube.com/embed/wKLBJcmkDcQ" frameborder="0" allowfullscreen></iframe>
-                  </div>
-                  <div class="row text-left">
-                     <div class="item col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1">
-                        <div class="smi-carusel animate">
-                           <div class="carusel-item">
-                              <a href="smi/test-kinezio-tejpov-v-programme-zhit-zdorovo-na-1-kanale.html" class="content" rel="nofollow">
-                                 <img src="assets/images/resources/39/270x235/2016-10-25-00-46-17.jpg" alt="...">
-                                 <div class="description">
-                                    <span>Тест кинезио тейпов в программе "Жить здорово" на 1 канале</span>
-                                    <small>gazeta.ru</small>
-                                 </div>
-                              </a>
-                           </div>
-                           <div class="carusel-item">
-                              <a href="smi/kineziotejpirovanie-pervyij-kanal-zhit-zdorovo.html" class="content" rel="nofollow">
-                                 <img src="assets/images/resources/38/270x235/2016-10-25-00-42-04.jpg" alt="...">
-                                 <div class="description">
-                                    <span>Кинезиотейпирование. Первый канал "Жить Здорово"</span>
-                                    <small>gazeta.ru</small>
-                                 </div>
-                              </a>
-                           </div>
-                           <div class="carusel-item">
-                              <a href="smi/vot-prikleilsya-kinezio-tejping.html" class="content" rel="nofollow">
-                                 <img src="assets/images/resources/37/270x235/700x605-0xd42ee42a-14399126891432300168.jpg" alt="...">
-                                 <div class="description">
-                                    <span>Вот приклеился: кинезио-тейпинг</span>
-                                    <small>gazeta.ru</small>
-                                 </div>
-                              </a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </section>
+
             <section class="category">
                <div class="container text-center">
                   <a href="catalog/index.html" class="title animate bottom" onclick="ga('send', 'event', 'MainPage', 'Сhoose');">Купить тейп</a>
@@ -373,7 +337,7 @@
                      <div class="col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1">
                         <div class="item col-sm-6">
                            <a href="catalog/sale/index.html" class="image animate" onclick="ga('send', 'event', 'MainPage', 'catalog/sale/index.html');">
-                              <img src="assets/components/phpthumbof/cache/weerwerwe.cfb3cb5d5df08f659e381893cb22ae641.png" alt="...">
+                              <%= image_tag("phpthumbof/cache/weerwerwe.cfb3cb5d5df08f659e381893cb22ae641.png", :alt => "rss feed") %>
                               <div class="description">
                                  <h2 class="name">Товары со скидкой</h2>
                                  <p>Покупая больше, Вы платите меньше. В наличие есть тейпы десяти цветов: красный, желтый, бежевый, зеленый и др. Тейпы доступны в двух вариантах: нарезанные (20 полос по 25см) и цельные ленты длиной 5м.</p>
@@ -382,7 +346,7 @@
                         </div>
                         <div class="item col-sm-6">
                            <a href="catalog/tape/index.html" class="image animate" onclick="ga('send', 'event', 'MainPage', 'catalog/tape/index.html');">
-                              <img src="assets/components/phpthumbof/cache/category-1.d68fb999bc13e6ed706ba0c710a5b2d51.jpg" alt="...">
+                              <%= image_tag("phpthumbof/cache/category-1.d68fb999bc13e6ed706ba0c710a5b2d51.jpg", :alt => "rss feed") %>
                               <div class="description">
                                  <h2 class="name">Кинезио тейпы X-Tape</h2>
                                  <p>В наличие есть тейпы десяти цветов: красный, желтый, бежевый, зеленый и др. Тейпы доступны в двух вариантах: нарезанные (20 полос по 25см) и цельные ленты длиной 5м.</p>
@@ -460,9 +424,9 @@
                      </div>
                   </div>
                </div>
-               <img src="theme/images/shape-bottom.svg" class="svg-image" alt="...">
+               <%= image_tag("shape-bottom.svg", :alt => "rss feed") %>
             </section>
-            <section class="gallery">
+            <!-- <section class="gallery">
                <div class="container">
                   <div class="gallery-outer">
                      <div class="gallery-carusel">
@@ -522,7 +486,7 @@
                         <img src="assets/images/gallery/1/130x130/resources.jpg" alt="...">
                      </div>
                      <div class="plate">
-                        <img src="theme/images/icons/photo.svg" alt="...">
+                        <%= image_tag("icons/photo.svg", :alt => "rss feed") %>
                         <span>Использование кинезио тейпов в жизни</span>
                         <div class="controll">
                            <button class="btn btn-primary prev"></button>
@@ -569,7 +533,7 @@
                      </div>
                   </div>
                </div>
-            </section>
+            </section> -->
          </main>
       </div>
       <div id="callback" class="modal fade" tabindex="-1" role="dialog">

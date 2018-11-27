@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="54px" height="61px" viewBox="0 0 54 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40 (33762) - http://www.bohemiancoding.com/sketch -->
+    <title>helper-ico-4</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Home-HD" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Index" transform="translate(-743.000000, -1334.000000)" stroke-width="1.3">
+            <g id="help_1_" transform="translate(1.000000, 1174.430054)">
+                <g id="Group" transform="translate(330.000000, 152.183479)">
+                    <g id="helper-ico-4" transform="translate(413.000000, 8.003321)">
+                        <g id="Group" stroke="#FFFFFF">
+                            <path d="M18.851,34.80044 C18.851,34.80044 19.257,30.3495932 15.687,24.0889954 C13.266,19.8432337 9.164,14.9602076 9.164,14.9602076 L6.449,9.85608966" id="Shape"></path>
+                            <path d="M5.384,11.136621 C5.384,11.136621 6.021,9.04975509 7.776,8.69760897 C9.531,8.34646326 12.019,9.74004151 12.747,8.18839768 C13.475,6.63675384 14.404,4.00466169 12.994,2.81316729 C11.584,1.62167289 9.468,-0.166068908 6.967,0.971403072 C4.466,2.10887505 -0.418,6.06751764 0.246,8.04533831 C0.909,10.023159 3.232,16.9440307 4.639,21.0507347 C6.046,25.1574388 10.59,38.2608759 13.623,39.9485762" id="Shape"></path>
+                        </g>
+                        <g id="Group" transform="translate(13.000000, 22.009132)" stroke="#FFFFFF">
+                            <path d="M39.184,1.10845994 C39.184,1.10845994 35.807,-0.808335409 30.334,1.16148194 C24.755,3.16931507 22.238,7.59815276 22.238,7.59815276" id="Shape"></path>
+                            <path d="M25.203,9.92511831 C25.203,9.92511831 20.727,5.87043587 14.549,5.90444998 C9.167,5.93446243 8.059,7.59815276 8.059,7.59815276" id="Shape"></path>
+                            <path d="M0.961,17.9394438 C2.881,20.0273101 7.875,22.3662806 16.647,22.0821627 C25.419,21.7980448 31.838,18.8058032 31.838,18.8058032" id="Shape"></path>
+                            <path d="M29.74,17.5402781 C29.74,17.5402781 33.404,19.480083 35.808,19.574122" id="Shape"></path>
+                        </g>
+                        <g id="Group" transform="translate(18.000000, 11.004566)" stroke="#00B5E9">
+                            <polyline id="Shape" points="15.42 42.1975093 8.279 48.1989996 0.851 42.1975093"></polyline>
+                            <path d="M8.136,2.3699834 L8.136,45.5018804" id="Shape" stroke-dasharray="3,5"></path>
+                            <polyline id="Shape" points="0.851 6.55972188 7.993 0.558231631 15.42 6.55972188"></polyline>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

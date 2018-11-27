@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="59px" height="22px" viewBox="0 0 59 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40 (33762) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0.001%" y1="50.0004755%" x2="100.001%" y2="50.0004755%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100.005%" y1="50.0004755%" x2="0.005%" y2="50.0004755%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ico" transform="translate(-1166.000000, -671.000000)">
+            <g id="Group-2" transform="translate(1166.000000, 671.000000)">
+                <polyline id="Shape" fill="url(#linearGradient-1)" points="10.61 21.776 0.61 11.186 10.558 0.744"></polyline>
+                <polyline id="Shape" fill="url(#linearGradient-2)" points="48.377 0.744 58.377 11.334 48.43 21.776"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

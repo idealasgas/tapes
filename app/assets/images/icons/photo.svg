@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="42px" viewBox="0 0 56 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40 (33762) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Home-HD" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Index" transform="translate(-589.000000, -4286.000000)" stroke="#00B5E9">
+            <g id="gallery" transform="translate(0.000000, 4132.000000)">
+                <g id="Group" transform="translate(589.000000, 154.064342)">
+                    <path d="M52.43,40.9259817 L3.586,40.9259817 C2.077,40.9259817 0.854,39.7024741 0.854,38.1928477 L0.854,5.87043587 C0.854,4.36080946 2.077,3.13730178 3.586,3.13730178 L12.937,3.13730178 L52.43,3.13730178 C53.939,3.13730178 55.162,4.36180988 55.162,5.87043587 L55.162,38.1928477 C55.162,39.7024741 53.939,40.9259817 52.43,40.9259817 L52.43,40.9259817 Z" id="Shape"></path>
+                    <ellipse id="Oval" cx="36.632" cy="22.2342258" rx="11.146" ry="11.1506268"></ellipse>
+                    <g transform="translate(30.000000, 15.006227)">
+                        <ellipse id="Oval" cx="6.632" cy="7.02591532" rx="6.61" ry="6.61274388"></ellipse>
+                        <path d="M3.297,6.8258323 C3.297,5.07510585 4.716,3.65551681 6.466,3.65551681" id="Shape"></path>
+                    </g>
+                    <polyline id="Shape" points="6.87 3.13730178 6.87 0.985408883 12.042 0.985408883 12.042 3.13730178"></polyline>
+                    <rect id="Rectangle-path" x="6.87" y="9.99014529" width="10.929" height="4.12771274"></rect>
+                    <ellipse id="Oval" cx="9.303" cy="26.6890743" rx="2.433" ry="2.43400996"></ellipse>
+                    <path d="M6.87,26.6890743 L6.87,31.6431299 C6.87,32.9876878 7.959,34.0771399 9.303,34.0771399 L9.303,34.0771399 C10.647,34.0771399 11.736,32.9876878 11.736,31.6431299 L11.736,26.6890743" id="Shape"></path>
+                    <path d="M11.011,10.3112785 L11.011,13.864753" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

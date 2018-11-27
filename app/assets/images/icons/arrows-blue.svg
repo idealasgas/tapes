@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="55px" height="54px" viewBox="0 0 55 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40 (33762) - http://www.bohemiancoding.com/sketch -->
+    <title>arrows-blue</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-0.00286806883%" y1="49.9977273%" x2="100.001912%" y2="49.9977273%" id="linearGradient-1">
+            <stop stop-color="#6EB6EA" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#618BC8" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-0.00286806883%" y1="49.9990909%" x2="100.001912%" y2="49.9990909%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#F9F9FA" stop-opacity="0.008" offset="0.58%"></stop>
+            <stop stop-color="#B7B5B9" stop-opacity="0.1866" offset="13.43%"></stop>
+            <stop stop-color="#8D8C92" stop-opacity="0.3637" offset="26.17%"></stop>
+            <stop stop-color="#74757B" stop-opacity="0.536" offset="38.57%"></stop>
+            <stop stop-color="#66686E" stop-opacity="0.7024" offset="50.54%"></stop>
+            <stop stop-color="#5E6167" stop-opacity="0.8601" offset="61.89%"></stop>
+            <stop stop-color="#5B5E65" offset="71.96%"></stop>
+        </linearGradient>
+        <linearGradient x1="99.9942644%" y1="49.9977273%" x2="-0.000955931553%" y2="49.9977273%" id="linearGradient-3">
+            <stop stop-color="#6EB6EA" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#618BC8" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="99.9942644%" y1="49.9995455%" x2="-0.000955931553%" y2="49.9995455%" id="linearGradient-4">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#F9F9FA" stop-opacity="0.008" offset="0.58%"></stop>
+            <stop stop-color="#B7B5B9" stop-opacity="0.1866" offset="13.43%"></stop>
+            <stop stop-color="#8D8C92" stop-opacity="0.3637" offset="26.17%"></stop>
+            <stop stop-color="#74757B" stop-opacity="0.536" offset="38.57%"></stop>
+            <stop stop-color="#66686E" stop-opacity="0.7024" offset="50.54%"></stop>
+            <stop stop-color="#5E6167" stop-opacity="0.8601" offset="61.89%"></stop>
+            <stop stop-color="#5B5E65" offset="71.96%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.88">
+        <g id="ico" transform="translate(-1177.000000, -1139.000000)">
+            <g id="arrows-blue" transform="translate(1177.000000, 1139.000000)">
+                <polyline id="Shape" fill="url(#linearGradient-1)" points="43.698 0.602 54.158 11.679 43.753 22.602"></polyline>
+                <polyline id="Shape" fill="url(#linearGradient-2)" points="43.698 31.684 54.158 42.762 43.753 53.684"></polyline>
+                <polyline id="Shape" fill="url(#linearGradient-3)" points="11.077 22.602 0.616 11.524 11.022 0.602"></polyline>
+                <polyline id="Shape" fill="url(#linearGradient-4)" points="11.077 53.684 0.616 42.606 11.022 31.684"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>
